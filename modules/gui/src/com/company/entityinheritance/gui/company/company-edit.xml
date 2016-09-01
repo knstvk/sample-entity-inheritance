@@ -14,12 +14,11 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         caption="msg://editCaption"
         class="com.company.entityinheritance.gui.company.CompanyEdit"
         datasource="companyDs"
-        focusComponent="fieldGroup"
+        focusComponent="customerFrame"
         messagesPack="com.company.entityinheritance.gui.company">
     <dsContext>
         <datasource id="companyDs"
@@ -28,11 +27,11 @@
     </dsContext>
     <layout expand="windowActions"
             spacing="true">
+        <frame id="customerFrame"
+               screen="demo$Customer.frame"/>
         <fieldGroup id="fieldGroup"
                     datasource="companyDs">
             <column width="250px">
-                <field id="name"/>
-                <field id="email"/>
                 <field id="industry"/>
             </column>
         </fieldGroup>
